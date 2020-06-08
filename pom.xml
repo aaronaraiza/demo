@@ -16,10 +16,9 @@
 
 		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
-		<username>MuleMeetups7</username>
-      <password>Meetup7</password>
-      <applicationName>meetup7 app</applicationName>
-      <environment>Sandbox</environment>
+		<username>MeetupMexico7</username>
+		<password>Meetup7</password>
+		<environment>Sandbox</environment>
 	</properties>
 
 	<build>
@@ -45,6 +44,9 @@
 			      <password>${password}</password>
 			      <applicationName>${cloudhub.application.name}</applicationName>
 			      <environment>${environment}</environment>
+			      <region>us-east-1</region>
+			      <workers>1</workers>
+			      <workerType>MICRO</workerType>
 			    </cloudHubDeployment>
 			  </configuration>
 			</plugin>
