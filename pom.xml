@@ -20,9 +20,6 @@
       <password>Meetup7</password>
       <applicationName>meetup7 app</applicationName>
       <environment>Sandbox</environment>
-      <region>${region}</region>
-      <workers>${workers}</workers>
-      <workerType>${workerType}</workerType>
 	</properties>
 
 	<build>
