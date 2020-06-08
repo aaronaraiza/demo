@@ -16,6 +16,13 @@
 
 		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+		<username>MuleMeetups7</username>
+      <password>Meetup7</password>
+      <applicationName>meetup7 app</applicationName>
+      <environment>Sandbox</environment>
+      <region>${region}</region>
+      <workers>${workers}</workers>
+      <workerType>${workerType}</workerType>
 	</properties>
 
 	<build>
@@ -27,6 +34,22 @@
 				<extensions>true</extensions>
 				<configuration>
 				</configuration>
+			</plugin>
+			<plugin>
+			  <groupId>org.mule.tools.maven</groupId>
+			  <artifactId>mule-maven-plugin</artifactId>
+			  <version>3.3.2</version>
+			  <extensions>true</extensions>
+			  <configuration>
+			    <cloudHubDeployment>
+			      <uri>https://anypoint.mulesoft.com</uri>
+			      <muleVersion>${app.runtime}</muleVersion>
+			      <username>${username}</username>
+			      <password>${password}</password>
+			      <applicationName>${cloudhub.application.name}</applicationName>
+			      <environment>${environment}</environment>
+			    </cloudHubDeployment>
+			  </configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -70,6 +93,10 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+        <pluginRepository>
+		    <id>mule-public</id>
+		    <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+		</pluginRepository>
     </pluginRepositories>
 
 </project>
